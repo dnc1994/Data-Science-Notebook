@@ -4,21 +4,17 @@ Intended for data science, this Docker image consists of iPython Notebook & Term
 
 ## Usage
 
-- Build the container:
+- Build the container: `docker build -t dnc1994/dsnb .`
 
-`docker build -t dnc1994/dsnb .`
-
-- Run the container:
-
-`docker run -p 8888:8888 -i -t -e PASSWORD=<your password> dnc1994/dsnb`
+- Run the container: `docker run -p 8888:8888 -i -t -e PASSWORD=<your password> dnc1994/dsnb`
 
 - Access `<docker host ip:8888>` and log in using the pasword you set.
 
 ## Additional Packages
 
-- seaborn
-- xgboost
-- tensorflow
+- [seaborn](https://stanford.edu/~mwaskom/software/seaborn/)
+- [xgboost](https://github.com/dmlc/xgboost)
+- [tensorflow](https://github.com/tensorflow/tensorflow)
 
 ## Acknowledgements
 
