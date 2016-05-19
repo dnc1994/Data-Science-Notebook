@@ -58,3 +58,4 @@ WORKDIR /home/condauser/notebooks
 # Set entry point
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [""]
+# CMD $PY2PATH/ipython notebook
