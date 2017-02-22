@@ -40,11 +40,11 @@ RUN apt-get --purge -y autoremove wget && \
 	chown condauser:condauser /home/condauser -R
 
 # Set persistent environment variables for Python3 and Python2
-ENV PY2PATH=/home/condauser/anaconda2/bin
-ENV PY3PATH=/home/condauser/anaconda2/envs/python3/bin
+ENV PY3PATH=/home/condauser/anaconda3/bin
+ENV PY2PATH=/home/condauser/anaconda3/envs/python2/bin
 
-# Install Python2 iPython kernel
-RUN $PY2PATH/python $PY2PATH/ipython kernelspec install-self
+# Install Python3 iPython kernel
+RUN $PY3PATH/python $PY3PATH/ipython kernelspec install-self
 
 # Set up our environment for running ipython notebook
 # Setting user here makes sure ipython notebook is run as user, not root
@@ -58,4 +58,4 @@ WORKDIR /home/condauser/notebooks
 # Set entry point
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [""]
-# CMD $PY2PATH/ipython notebook
+# CMD $PY3PATH/ipython notebook
