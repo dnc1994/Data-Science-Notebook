@@ -10,12 +10,6 @@ Intended for data science, this Docker image consists of iPython Notebook & Term
 
 - Access `<docker host ip:8888>` and log in using the pasword you set.
 
-## Additional Packages
-
-- [seaborn](https://stanford.edu/~mwaskom/software/seaborn/)
-- [xgboost](https://github.com/dmlc/xgboost)
-- [tensorflow](https://github.com/tensorflow/tensorflow)
-
 ## Acknowledgements
 
 - [rothnic/anaconda-notebook](https://github.com/rothnic/anaconda-notebook)

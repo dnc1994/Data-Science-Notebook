@@ -14,4 +14,4 @@ echo "========================================================================"
 
 unset PASSWORD
 
-$PY3PATH/ipython notebook --no-browser --port 8888 --ip=* --NotebookApp.password="$HASH"
+$PY3PATH/jupyter notebook --no-browser --port 8888 --ip=* --NotebookApp.password="$HASH"

@@ -22,11 +22,6 @@ echo "
 # added by Anaconda-Notebook
 export PATH=\"$PY2PATH:\$PATH\"" >> $BASH_RC
 
-# Additional packages to install
-$CONDA2 install --yes seaborn
-$PIP2 install xgboost
-$PIP2 install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
-
 # Python 2 environment
 $CONDA3 create --yes -n python2 python=2 pip ipython
 
