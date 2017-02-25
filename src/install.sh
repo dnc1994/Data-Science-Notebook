@@ -1,7 +1,7 @@
 # Constants
 HOME=/home/condauser
 BASH_RC=/home/condauser/.bashrc
-PREFIX=/home/condauser/anaconda2
+PREFIX=/home/condauser/anaconda3
 
 PY3PATH=$PREFIX/bin
 PY2PATH=$PREFIX/envs/python2/bin
@@ -23,13 +23,7 @@ echo "
 export PATH=\"$PY2PATH:\$PATH\"" >> $BASH_RC
 
 # Python 2 environment
-$CONDA3 create --yes -n python2 python=2 pip ipython
-
-# iPython setup
-$PY3PATH/ipython profile create default --ipython-dir $HOME/.ipython
-chown condauser:condauser $HOME/.ipython/profile_default/security -R
-mkdir $HOME/notebooks
-cp -a /tmp/notebooks $HOME/notebooks
+$CONDA3 create --yes -n python2 python=2 pip
 
 # Clean-up
 rm -rf $HOME/Anaconda.sh

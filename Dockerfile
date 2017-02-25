@@ -39,9 +39,6 @@ RUN chown condauser:condauser /home/condauser -R
 ENV PY3PATH=/home/condauser/anaconda3/bin
 ENV PY2PATH=/home/condauser/anaconda3/envs/python2/bin
 
-# Install Python3 iPython kernel
-RUN $PY3PATH/python $PY3PATH/ipython kernel install
-
 # Set up our environment for running ipython notebook
 # Setting user here makes sure ipython notebook is run as user, not root
 EXPOSE 8888
@@ -49,7 +46,7 @@ USER condauser
 ENV HOME=/home/condauser
 ENV SHELL=/bin/bash
 ENV USER=condauser
-WORKDIR /home/condauser/notebooks
+WORKDIR /home/condauser/
 
 # Set entry point
 # ENTRYPOINT ["docker_entrypoint.sh"]
